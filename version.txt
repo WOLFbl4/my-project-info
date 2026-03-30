@@ -1,0 +1,45 @@
+# UTF-8
+#
+# For more details about fixed file info 'ffi' see:
+# http://msdn.microsoft.com/en-us/library/ms646997.aspx
+VSVersionInfo(
+  ffi=FixedFileInfo(
+    # Contains as much info as Windows will allow. All items are strings that Windows will
+    # automatically convert to Unicode unless an encoding is specified:
+    # Contains version info for the EXE.
+    mask=0x3f,
+    mask_values=[0, 0, 1, 0, 0, 0, 0, 0],
+    # Contains all the divisor for the stuff in mask_values and the version strings.
+    num_bits=32,
+    # Product version and file version. For versions read by most apps.
+    product_version=(1, 0, 0, 0),
+    # Contains the version for the product this EXE is part of.
+    file_version=(1, 0, 0, 0),
+    # The mask specifies the valid bits 'flags'r
+    mask=0x3f,
+    # Contains a bitmask that specifies the valid bits 'flags'r
+    mask_values=[0, 0, 1, 0, 0, 0, 0, 0],
+    # Specifies that this is a final release.
+    is_debug=False,
+    # Specifies that this file may be distributed.
+    is_patched=False,
+    # Specifies that this is a private build
+    is_prerelease=False,
+    # Specifies that this is a private build
+    is_privatebuild=False,
+    # Specifies that this is a special build.
+    is_specialbuild=False,
+  ),
+  kids=[StringFileInfo(
+      [StringTable(
+        u'040904B0',
+        [StringStruct(u'CompanyName', u'KANT'),
+        StringStruct(u'FileDescription', u'Учет рабочего времени КАНТ'),
+        StringStruct(u'FileVersion', u'1.0.0.0'),
+        StringStruct(u'InternalName', u'info_go'),
+        StringStruct(u'LegalCopyright', u'© 2026 KANT'),
+        StringStruct(u'OriginalFilename', u'info_go.exe'),
+        StringStruct(u'ProductName', u'info_go - Timesheet Accounting System'),
+        StringStruct(u'ProductVersion', u'1.0.0.0')])
+      ]), VarFileInfo([VarStruct(u'Translation', [1033, 1200])])]
+)
